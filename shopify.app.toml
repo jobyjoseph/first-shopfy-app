@@ -1,0 +1,29 @@
+# Learn more about configuring your app at https://shopify.dev/docs/apps/tools/cli/configuration
+
+client_id = "3f1eeaaa82febe301513bc99269b98f6"
+name = "first-shopfy-app"
+handle = "first-shopfy-app-2"
+application_url = "https://barbados-dare-please-paying.trycloudflare.com"
+embedded = true
+
+[build]
+automatically_update_urls_on_dev = true
+dev_store_url = "snow-ski-poc.myshopify.com"
+include_config_on_deploy = true
+
+[access_scopes]
+# Learn more at https://shopify.dev/docs/apps/tools/cli/configuration#access_scopes
+scopes = "write_products"
+
+[auth]
+redirect_urls = [
+  "https://barbados-dare-please-paying.trycloudflare.com/auth/callback",
+  "https://barbados-dare-please-paying.trycloudflare.com/auth/shopify/callback",
+  "https://barbados-dare-please-paying.trycloudflare.com/api/auth/callback"
+]
+
+[webhooks]
+api_version = "2024-04"
+
+[pos]
+embedded = false
